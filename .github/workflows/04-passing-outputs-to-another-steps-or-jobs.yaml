@@ -14,6 +14,7 @@ jobs:
         id: step-1
         run:
           message="Hello world"
+          echo "$message"
           echo "message=$message" >> $GITHUB_OUTPUT
 
       - name: Step 2
