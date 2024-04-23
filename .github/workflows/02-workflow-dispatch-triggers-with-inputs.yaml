@@ -1,0 +1,29 @@
+name: 01-basic-triggers
+
+on:
+  workflow_dispatch:
+    string-type:
+      description: "Inputs"
+      type: string
+      required: true
+      default: "latest"
+    dropdown-type:
+      description: 'Type of workflow to run'
+      required: true
+      default: 'full'
+      type: choice
+      options:
+      - none
+      - half-full
+      - full
+permissions:
+  id-token: write   # This is required for requesting the JWT
+  contents: read    # This is required for actions/checkout
+
+jobs:
+  test-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo hi
+        run:
+          echo "Hi. Options selected string: ${{ inputs.string-type }}, dropdown: ${{ inputs.dropdown-type }}"
