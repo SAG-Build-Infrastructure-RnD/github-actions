@@ -1,10 +1,7 @@
-name: 05-passing-outputs-between-job
+name: 05-passing-outputs-between-jobs
 
 on:
   workflow_dispatch:
-permissions:
-  id-token: write   # This is required for requesting the JWT
-  contents: read    # This is required for actions/checkout
 
 jobs:
   job-1:
@@ -13,7 +10,7 @@ jobs:
       message: ${{  steps.step-1.outputs.message }}
     steps:
       - name: Step 1
-        id: step-1
+        id: step-1 # id is optional. Only declare if you want to output variables from this step
         run: |
           message="Hello world"
           echo "$message"
