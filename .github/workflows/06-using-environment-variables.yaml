@@ -36,6 +36,7 @@ jobs:
           MESSAGE_OUTPUT: ${{ needs.job-1.outputs.message }}
           STEP_ENV_MESSAGE: "This is from step 'Echo messages' env"
         run: |
+          echo "Output from job-1 >> ${{ needs.job-1.outputs.message }}"
           echo "Environment variable from step level >> $STEP_ENV_MESSAGE"
           echo "Environment variable from job level >> $JOB_ENV_MESSAGE"
           echo "Environment variable from global level >> $GLOBAL_ENV_MESSAGE"
