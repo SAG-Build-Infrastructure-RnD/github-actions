@@ -28,7 +28,7 @@ jobs:
           echo "hi from job 3"
   job-4:
     runs-on: ubuntu-latest
-    needs: job-4 # <<<<< Notice this
+    needs: job-3 # <<<<< Notice this
     steps:
       - name: Echo hi
         run:
