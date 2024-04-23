@@ -1,4 +1,4 @@
-name: 04-passing-outputs-to-another-steps-or-jobs.yaml
+name: 04-passing-outputs-between-steps
 
 on:
   workflow_dispatch:
