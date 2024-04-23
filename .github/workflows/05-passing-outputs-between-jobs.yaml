@@ -1,4 +1,4 @@
-name: 05-passing-outputs-between-steps
+name: 05-passing-outputs-between-job
 
 on:
   workflow_dispatch:
