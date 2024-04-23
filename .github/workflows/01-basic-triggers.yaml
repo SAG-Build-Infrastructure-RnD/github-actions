@@ -9,7 +9,7 @@ permissions:
 
 jobs:
   test-job:
-    runs-on: ubuntu
+    runs-on: ubuntu-latest
     steps:
       - name: Echo hi
         run:
