@@ -26,4 +26,4 @@ jobs:
     steps:
       - name: Echo hi
         run:
-          echo "Hi. Options selected string: ${{ inputs.string-type }}, dropdown: ${{ inputs.dropdown-type }}"
+          echo "Hi. Options selected string ${{ inputs.string-type }}, dropdown ${{ inputs.dropdown-type }}"
