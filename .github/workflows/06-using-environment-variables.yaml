@@ -1,4 +1,4 @@
-name: 06-using-environment-variables
+name: 06 using environment variables
 
 on:
   workflow_dispatch:

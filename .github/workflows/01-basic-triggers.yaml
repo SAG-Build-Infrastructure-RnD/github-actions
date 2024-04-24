@@ -1,4 +1,4 @@
-name: 01-basic-triggers
+name: 01 basic triggers
 
 on:
   workflow_dispatch:

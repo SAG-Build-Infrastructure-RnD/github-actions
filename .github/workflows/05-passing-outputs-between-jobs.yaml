@@ -1,4 +1,4 @@
-name: 05-passing-outputs-between-jobs
+name: 05 passing outputs between jobs
 
 on:
   workflow_dispatch:

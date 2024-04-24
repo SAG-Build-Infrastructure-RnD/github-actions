@@ -1,4 +1,4 @@
-name: 02-workflow-dispatch-triggers-with-inputs
+name: 02 workflow dispatch triggers with inputs
 
 on:
   workflow_dispatch:
