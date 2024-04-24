@@ -14,7 +14,7 @@ jobs:
           mkdir meows
           dir
   container-test-job:
-    runs-on: [self-hosted, Windows]
+    runs-on: [self-hosted, linux]
     container:
       image: node:18
       env:
