@@ -14,7 +14,7 @@ jobs:
           dir
       - uses: actions/setup-java@v4
         with:
-          distribution: 'temurin' # See 'Supported distributions' for available options
+          distribution: 'microsoft' # See 'Supported distributions' for available options
           java-version: '21'
   # container-test-job:
   #   runs-on: [self-hosted, Windows]
