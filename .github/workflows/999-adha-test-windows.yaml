@@ -1,4 +1,4 @@
-name: 999 adha test windows
+name: 999-adha-test windows
 
 on:
   workflow_dispatch:
@@ -13,17 +13,21 @@ jobs:
           echo "meows"
           mkdir meows
           dir
-  container-test-job:
-    runs-on: [self-hosted, linux]
-    container:
-      image: node:18
-      env:
-        NODE_ENV: development
-      ports:
-        - 80
-      volumes:
-        - my_docker_volume:/volume_mount
-      options: --cpus 1
-    steps:
-      - name: Check for dockerenv file
-        run: (ls /.dockerenv && echo Found dockerenv) || (echo No dockerenv)
+      - uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin' # See 'Supported distributions' for available options
+          java-version: '21'
+  # container-test-job:
+  #   runs-on: [self-hosted, Windows]
+  #   container:
+  #     image: node:18
+  #     env:
+  #       NODE_ENV: development
+  #     ports:
+  #       - 80
+  #     volumes:
+  #       - my_docker_volume:/volume_mount
+  #     options: --cpus 1
+  #   steps:
+  #     - name: Check for dockerenv file
+  #       run: (ls /.dockerenv && echo Found dockerenv) || (echo No dockerenv)
